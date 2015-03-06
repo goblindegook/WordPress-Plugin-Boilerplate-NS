@@ -36,15 +36,13 @@ if ( ! defined( 'WPINC' ) ) {
  * The code that runs during plugin activation.
  * This action is documented in lib/Activator.php
  */
-\register_activation_hook( __FILE__,
-    array( '\Vendor_Name\Plugin_Name\Activator::activate' ) );
+\register_activation_hook( __FILE__, '\Vendor_Name\Plugin_Name\Activator::activate' );
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in lib/Deactivator.php
  */
-\register_deactivation_hook( __FILE__,
-    array( '\Vendor_Name\Plugin_Name\Deactivator::deactivate' ) );
+\register_deactivation_hook( __FILE__, '\Vendor_Name\Plugin_Name\Deactivator::deactivate' );
 
 /**
  * Begins execution of the plugin.
