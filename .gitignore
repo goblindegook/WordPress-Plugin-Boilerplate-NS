@@ -30,6 +30,11 @@ dwsync.xml
 *.komodoproject
 .komodotools
 
+# Package management
+node_modules/
+vendor/
+composer.lock
+
 # Folders to ignore
 .hg
 .svn

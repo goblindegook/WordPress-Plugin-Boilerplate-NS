@@ -1,5 +1,8 @@
-# Changelog
+# Change Log
 
-* (4 September 2014). Updating the `README` with Windows symbolic link instructions.
-* (3 September 2014). Updating the `README` to describe how to install the Boilerplate.
-* (1 September 2014). Initial Release.
+## April 12, 2015
+
+* Fork of the WordPress Plugin Boilerplate.
+* Namespaces and autoloader (PSR-4) support.
+* Composer dependency support.
+* `Public` changed to `Frontend` due to it being a PHP keyword.

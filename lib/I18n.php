@@ -9,9 +9,11 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    PluginName
+ * @subpackage PluginName/includes
  */
+
+namespace Vendor_Name\Plugin_Name;
 
 /**
  * Define the internationalization functionality.
@@ -20,11 +22,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    PluginName
+ * @subpackage PluginName/includes
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_i18n {
+class I18n {
 
 	/**
 	 * The domain specified for this plugin.
@@ -42,10 +44,10 @@ class Plugin_Name_i18n {
 	 */
 	public function load_plugin_textdomain() {
 
-		load_plugin_textdomain(
+		\load_plugin_textdomain(
 			$this->domain,
 			false,
-			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+			dirname( dirname( \plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
 
 	}
