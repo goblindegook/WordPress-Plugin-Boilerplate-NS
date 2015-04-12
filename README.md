@@ -1,15 +1,8 @@
 # WordPress Plugin Boilerplate
 
-A standardized, organized, object-oriented foundation for building high-quality WordPress Plugins.
+A standardized, organized, object-oriented foundation for building high-quality WordPress Plugins
 
-## Contents
-
-The WordPress Plugin Boilerplate includes the following files:
-
-* `.gitignore`. Used to exclude certain files from the repository.
-* `ChangeLog.md`. The list of changes to the core project.
-* `README.md`. The file that you’re currently reading.
-* A `plugin-name` subdirectory that contains the source code - a fully executable WordPress plugin.
+This is a fork of the original WordPress Plugin Boilerplate project, with added namespace and autoloader support.
 
 ## Features
 
@@ -20,10 +13,11 @@ The WordPress Plugin Boilerplate includes the following files:
 
 ## Installation
 
-1. Copy the `plugin-name` directory into your `wp-content/plugins` directory.
-2. In the WordPress dashboard, navigation to the *Plugins* page
+1. Clone the directory into your `wp-content/plugins` directory.
+2. Change into the cloned directory and execute `composer install`.
+3. In the WordPress dashboard, navigation to the *Plugins* page
 Locate the menu item that reads “The WordPress Plugin Boilerplate.”
-3. Click on *Activate.*
+4. Click on *Activate.*
 
 Note that this will activate the source code of the Boilerplate, but because the Boilerplate has no real functionality so no menu  items, meta boxes, or custom post types will be added.
 
@@ -65,13 +59,11 @@ For reference, [here's a discussion](http://make.wordpress.org/themes/2013/03/04
 
 Note that if you include your own classes, or third-party libraries, there are three locations in which said files may go:
 
-* `plugin-name/includes` is where functionality shared between the dashboard and the public-facing parts of the side reside
-* `plugin-name/admin` is for all dashboard-specific functionality
-* `plugin-name/public` is for all public-facing functionality
+* `lib/Common` is where functionality shared between the dashboard and the public-facing parts of the side reside.
+* `lib/Admin` is for all dashboard-specific functionality.
+* `lib/Frontend` is for all public-facing functionality.
 
-Note that previous versions of the Boilerplate did not include `Plugin_Name_Loader` but this class is used to register all filters and actions with WordPress.
-
-The example code provided shows how to register your hooks with the Loader class. More information will be provided in the upcoming documentation on the website.
+The example code provided shows how to register your hooks with the `Loader` class. More information will be provided in the upcoming documentation on the website.
 
 ### Assets
 

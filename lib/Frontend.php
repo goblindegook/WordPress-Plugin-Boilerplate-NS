@@ -7,7 +7,7 @@
  * @since      1.0.0
  *
  * @package    Plugin_Name
- * @subpackage Plugin_Name/public
+ * @subpackage Plugin_Name/Frontend
  */
 
 namespace Vendor_Name\Plugin_Name;
@@ -19,10 +19,10 @@ namespace Vendor_Name\Plugin_Name;
  * enqueue the dashboard-specific stylesheet and JavaScript.
  *
  * @package    Plugin_Name
- * @subpackage Plugin_Name/public
+ * @subpackage Plugin_Name/Frontend
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Public {
+class Frontend {
 
 	/**
 	 * The plugin's instance.
@@ -55,17 +55,16 @@ class Plugin_Name_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
+		 * defined in Loader as all of the hooks are defined in that particular
 		 * class.
+		 *
+		 * The Loader will then create the relationship between the defined
+		 * hooks and the functions defined in this class.
 		 */
 
 		\wp_enqueue_style(
 			$this->plugin->get_plugin_name(),
-			\plugin_dir_url( __FILE__ ) . 'dist/styles/plugin-name.css',
+			\plugin_dir_url( dirname( __FILE__ ) ) . 'dist/styles/plugin-name.css',
 			array(),
 			$this->plugin->get_version(),
 			'all' );
@@ -92,7 +91,7 @@ class Plugin_Name_Public {
 
 		\wp_enqueue_script(
 			$this->plugin->get_plugin_name(),
-			\plugin_dir_url( __FILE__ ) . 'dist/scripts/plugin-name.js',
+			\plugin_dir_url( dirname( __FILE__ ) ) . 'dist/scripts/plugin-name.js',
 			array( 'jquery' ),
 			$this->plugin->get_version(),
 			false );

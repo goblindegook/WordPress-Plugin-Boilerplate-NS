@@ -25,6 +25,8 @@
  * Domain Path:       /languages
  */
 
+require_once 'vendor/autoload.php';
+
 use Vendor_Name\Plugin_Name;
 
 // If this file is called directly, abort.

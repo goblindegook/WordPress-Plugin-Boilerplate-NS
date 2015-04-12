@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
+ * @package    PluginName
+ * @subpackage PluginName/admin
  */
 
 namespace Vendor_Name\Plugin_Name;
@@ -18,8 +18,8 @@ namespace Vendor_Name\Plugin_Name;
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the dashboard-specific stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
+ * @package    PluginName
+ * @subpackage PluginName/admin
  * @author     Your Name <email@example.com>
  */
 class Admin {
@@ -55,17 +55,17 @@ class Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
+		 * defined in PluginName_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Plugin_Name_Loader will then create the relationship
+		 * The PluginName_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
 		\wp_enqueue_style(
 			$this->plugin->get_plugin_name(),
-			\plugin_dir_url( __FILE__ ) . 'dist/styles/plugin-name-admin.css',
+			\plugin_dir_url( dirname( __FILE__ ) ) . 'dist/styles/plugin-name-admin.css',
 			array(),
 			$this->plugin->get_version(),
 			'all' );
@@ -83,17 +83,17 @@ class Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
+		 * defined in PluginName_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Plugin_Name_Loader will then create the relationship
+		 * The PluginName_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
 		\wp_enqueue_script(
 			$this->plugin->get_plugin_name(),
-			\plugin_dir_url( __FILE__ ) . 'dist/scripts/plugin-name-admin.js',
+			\plugin_dir_url( dirname( __FILE__ ) ) . 'dist/scripts/plugin-name-admin.js',
 			array( 'jquery' ),
 			$this->plugin->get_version(),
 			false );
