@@ -25,7 +25,7 @@
  * Domain Path:       /languages
  */
 
-require_once 'vendor/autoload.php';
+require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 
 use Vendor_Name\Plugin_Name;
 
