@@ -33,7 +33,6 @@ dwsync.xml
 # Package management
 node_modules/
 vendor/
-composer.lock
 
 # Folders to ignore
 .hg

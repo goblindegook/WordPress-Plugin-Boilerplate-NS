@@ -25,9 +25,9 @@
  * Domain Path:       /languages
  */
 
-require_once dirname( __FILE__ ) . '/vendor/autoload.php';
-
-use Vendor_Name\Plugin_Name;
+if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
+	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+}
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -52,6 +52,6 @@ if ( ! defined( 'WPINC' ) ) {
  * @since    1.0.0
  */
 \add_action( 'plugins_loaded', function () {
-    $plugin = new Plugin_Name\Plugin();
+    $plugin = new \Vendor_Name\Plugin_Name\Plugin();
     $plugin->run();
 } );
