@@ -1,7 +1,0 @@
-{
-  "preset": "airbnb",
-  "disallowKeywords": [
-    "class",
-    "with"
-  ]
-}
